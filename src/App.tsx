@@ -26,7 +26,7 @@ const App = () => {
       errorElement: <RootBoundary />,
       children: [
         { index: true, element: <MainDashboard />, }
-        { path: "note-editor", element: <NoteEditor />, }, { path: "search-results", element: <SearchResults />, }, { path: "*", element: <NotFound />, }
+        { path: "note-editor", element: <NoteEditor /> }, { path: "search-results", element: <SearchResults /> }, { path: "*", element: <NotFound />, }
       ],
     },
   ]);
