@@ -11,6 +11,8 @@ import RootBoundary from "./components/errors/RootBoundary";
 import { Layout } from "./layout";
 import MainDashboard from "./pages/MainDashboard";
 import NotFound from "./pages/NotFound";
+import NoteEditor from "./pages/NoteEditor";
+import SearchResults from "./pages/SearchResults";
 import { useTheme } from "./theme/use-theme";
 
 
@@ -25,8 +27,10 @@ const App = () => {
       element: <Layout showSidebar={false} showHeader={false} showFooter={false} />,
       errorElement: <RootBoundary />,
       children: [
-        { index: true, element: <MainDashboard />, }
-        { path: "note-editor", element: <NoteEditor /> }, { path: "search-results", element: <SearchResults /> }, { path: "*", element: <NotFound />, }
+        { index: true, element: <MainDashboard /> },
+        { path: "note-editor", element: <NoteEditor /> },
+        { path: "search-results", element: <SearchResults /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
   ]);
